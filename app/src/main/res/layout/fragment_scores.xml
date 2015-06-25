@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/cardViewResult"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:id="@+id/textViewTitleLevel"
+                android:text="Vous êtes niveau"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60sp"
+                android:text="0"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textViewTitleLevel"
+                android:id="@+id/textViewNumberLevel"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/cardViewScores"
+        android:layout_below="@+id/cardViewResult"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimaryDark">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:text="Détails"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llNeverPlayed"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Vous n'avez jamais joué\nen multijoueur"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llPlayed"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:visibility="gone"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:id="@+id/textViewTitleEnemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="Zombies tués"/>
+
+            <TextView
+                android:id="@+id/textViewTitleShoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewTitleEnemy"
+                android:layout_marginTop="20dp"
+                android:text="Balles tirées"/>
+
+            <TextView
+                android:id="@+id/textViewTitleGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewTitleShoot"
+                android:layout_marginTop="20dp"
+                android:text="Parties jouées"/>
+
+            <TextView
+                android:id="@+id/textViewTitleDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewTitleGame"
+                android:layout_marginTop="20dp"
+                android:text="Morts"/>
+
+            <TextView
+                android:id="@+id/textViewTitleSnap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewTitleDeath"
+                android:layout_marginTop="20dp"
+                android:text="Morsures"/>
+
+            <TextView
+                android:id="@+id/textViewNumberEnemy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/textViewNumberShoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewNumberEnemy"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/textViewNumberGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewNumberShoot"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/textViewNumberDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewNumberGame"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/textViewNumberSnap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewNumberDeath"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="0"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

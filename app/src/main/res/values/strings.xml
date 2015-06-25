@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">0xyde</string>
+
+    <string name="txt_open">open</string>
+    <string name="txt_close">close</string>
+
+    <string name="txt_link"><a href="http://0xyde.sybiload.com">http://0xyde.sybiload.com</a></string>
+</resources>
