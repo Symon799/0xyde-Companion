@@ -78,6 +78,8 @@ public class ActivityMain extends AppCompatActivity
                         break;
 
                     case R.id.item_installation:
+                        tx.replace(R.id.main, Fragment.instantiate(ActivityMain.this, "com.sybiload.oxyde.FragmentInstall"));
+                        tx.commit();
                         break;
 
                     case R.id.item_about:
